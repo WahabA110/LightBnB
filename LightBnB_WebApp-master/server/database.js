@@ -140,23 +140,6 @@ exports.getAllReservations = getAllReservations;
 
 exports.getAllProperties = getAllProperties;
 
-// const getAllProperties = (options, limit = 10) => {
-//   return pool
-//     .query(`SELECT * FROM properties LIMIT $1`, [limit])
-//     .then((result) => result.rows)
-//     .catch((err) => err.message);
-// };
-
-// SELECT properties.*, avg(property_reviews.rating) as average_rating
-// FROM properties
-// JOIN property_reviews ON properties.id = property_id
-// WHERE city LIKE '%ancouv%'
-// GROUP BY properties.id
-// HAVING avg(property_reviews.rating) >= 4
-// ORDER BY cost_per_night
-// LIMIT 10;
-
-
 
 /**
  * Add a property to the database
